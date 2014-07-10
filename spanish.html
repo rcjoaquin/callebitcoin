@@ -172,7 +172,15 @@
                     <h2>Calle Serrano</h2>
                     <p>Estas son las tiendas donde puedes ir a gastar tus Bitcoins. Aunque cualquiera puede aceptar Bitcoins, esta iniciativa comprende un n&uacute;mero limitado y exclusivo de tiendas. ¿Crees que tu comercio re&uacute;ne las condiciones para entrar en la lista? Habla con nosotros, ¡aparecer en esta lista y aceptar Bitcoin es gratis!</p>
                     <hr class="colored">
-                    <h4>¡Muy pronto anunciaremos los comercios seleccionados!</h4>
+                    <span id="lista_de_empresas"></span>
+                    <script>
+                        var lista_de_empresas = $.ajax({ type: "GET",   
+                        url: "lista_de_empresas.php",   
+                        async: false
+                      }).responseText;
+                      
+                      $("#lista_de_empresas").html(lista_de_empresas);
+                    </script>
                 </div>
             </div>
             <div class="row content-row">
